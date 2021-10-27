@@ -61,11 +61,15 @@ public class main {
 			System.out.println("0. Private ");
 			System.out.println("Enter code: ");
 			x = scnr.nextInt();
+			
+			if (x < 0 || x > 3) {
+				throw new Exception("Choose wrong");
+			}
 			e.setDepartment(x);
 		}
 		catch(Exception ex)
 		{
-			System.out.println("Error: " + ex);
+			System.out.println("Error: " + ex.getMessage());
 		}
 		
 	}
@@ -74,7 +78,6 @@ public class main {
 	{
 		
 		infor user = new infor(e);
-		user.printInfor();
 		userList.add(user);
 	}
 	public static void print()
