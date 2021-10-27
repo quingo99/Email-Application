@@ -37,6 +37,8 @@ public class register {
 			case 3:
 				this.department ="finance.";
 				break;
+			default: 
+				break;
 		}
 	}
 	public String getFirstname() 
