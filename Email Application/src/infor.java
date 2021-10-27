@@ -5,8 +5,11 @@ public class infor {
 	
 	public infor(register u)
 	{
-		this.username = u.getFirstname() + u.getLastname()+"@" + u.getDepartment()+"weber.edu";
-		this.password = u.getPassword();
+		if(u.getDepartment() != null) {
+			this.username = u.getFirstname() + u.getLastname()+"@" + u.getDepartment()+"weber.edu";
+			this.password = u.getPassword();
+		}
+		
 	}
 	
 	public void printInfor()
